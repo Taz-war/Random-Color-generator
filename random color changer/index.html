@@ -13,11 +13,12 @@
         let box = document.getElementById('display');
         let btn = document.getElementById('btn');
         let Color = ['#FF0000','#00FF00','#0000FF','#FFFF00','#808000','#800000','#00FFFF','#008080','#FF00FF','#800080'];
-        btn.addEventListener('click',function (params) {
-            box.style.background =Color [Math.floor(Math.random()*10)]
+        btn.addEventListener('click',setInterval(ran_generator, 1000));
+        function ran_generator() {
+            box.style.background =Color [Math.floor(Math.random()*10)];
         //    box.innerHTML =Color[Math.floor(Math.random()*10)]; 
             
-        })
+        }
     </script>
 </body>
 </html>
